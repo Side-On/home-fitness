@@ -1,62 +1,72 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% block corecss %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
-    
-    {% block corejs %}
-    <script src="https://kit.fontawesome.com/0f7c515f4e.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    {% endblock %}
+<head>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Home Fitness {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-      <header class="container-fluid fixed-top"></header>
-      
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home Fitness</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Cardio
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+  {% block corecss %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% endblock %}
+
+  {% block corejs %}
+  <script src="https://kit.fontawesome.com/0f7c515f4e.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+    integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
+  </script>
+  {% endblock %}
+
+  <title>Home Fitness {% block extra_title %}{% endblock %}</title>
+</head>
+
+<body>
+  <header class="container-fluid fixed-top">
+    <div id="topnav" class="row bg-black pt-lg-2 d-none d-lg-flex"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Home Fitness</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Cardio
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Weights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Accessories</a>
+            </li>
           </ul>
-        </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Weights</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Accessories</a>
-          </li>
-        </ul>
-        <form method="GET" action="" class="d-flex">
-          <input class="form-control me-2" type="text" name="q" placeholder="Search our products" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-      <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <form method="GET" action="" class="d-flex">
+            <input class="form-control me-2" type="text" name="q" placeholder="Search our products" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
-            <a href="#" class="text-white nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="text-white nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               <div class="text-center">
                 <div><i class="fas fa-user fa-lg"></i></div>
                 <p class="my-0">My Account</p>
@@ -64,37 +74,49 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
-                  {% if request.user.is_superuser %}
-                      <a href="" class="dropdown-item">Product Management</a>
-                  {% endif %}
-                  <a href="" class="dropdown-item">My Profile</a>
-                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-              {% else %}
-                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              {% if request.user.is_superuser %}
+              <a href="" class="dropdown-item">Product Management</a>
               {% endif %}
-          </div>
+              <a href="" class="dropdown-item">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              {% endif %}
+            </div>
           </li>
           <li class="list-inline-item">
-            
+
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="">
               <div class="text-center">
-                  <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                  <p class="my-0">
-                      {% if grand_total %}
-                          ${{ grand_total|floatformat:2 }}
-                      {% else %}
-                          £0.00
-                      {% endif %}
-                  </p>
+                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <p class="my-0">
+                  {% if grand_total %}
+                  ${{ grand_total|floatformat:2 }}
+                  {% else %}
+                  £0.00
+                  {% endif %}
+                </p>
               </div>
-          </a>
+            </a>
           </li>
-      </ul>
-    </div>
-  </nav>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="row bg-white">
+      <nav class="navbar navbar-expand-lg navbar-light w-100">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          {% include 'includes/mobile-header.html' %}
+          {% include 'includes/main-nav.html' %}
+      </nav>
+  </div>
+  </header>
+  {% block content %}
 
-      {% block content %}
-      {% endblock %}
-  </body>
+  {% endblock %}
+</body>
+
 </html>
