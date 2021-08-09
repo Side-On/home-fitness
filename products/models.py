@@ -20,7 +20,7 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     brand = models.CharField(max_length=254, blank=True)
     description = models.TextField()
-    weight = models.DecimalField(max_digits=6, decimal_places=2)
+    weight = models.DecimalField(max_digits=6, decimal_places=2, null=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)

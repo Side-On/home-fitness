@@ -1,0 +1,55 @@
+[{
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "name": "Treadmill",
+            "brand": "Quick Feet",
+            "description": "Get those legs moving with the step counting machine",
+            "price": 109.99,
+            "rating": 4.9,
+            "image": ""
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "name": "Dumbell",
+            "brand": "Hulk",
+            "description": "Bulking up? This is what you need, come in all sizes for whatever your gains are",
+            "weight": 2.5,
+            "price": 20.99,
+            "rating": 4.2,
+            "image": ""
+        }
+
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "name": "Protein Bar",
+            "brand": "Snack Attack",
+            "description": "Perfect for if you need that extra bit of protein throughout the day",
+            "price": 1.99,
+            "rating": 4,
+            "image": ""
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "category": 4,
+            "name": "Yoga Mat",
+            "brand": "Horizon",
+            "description": "Let this mat support you through your yoga session",
+            "price": 12.99,
+            "rating": 4.9,
+            "image": ""
+        }
+    }
+]
