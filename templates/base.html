@@ -29,85 +29,113 @@
 </head>
 
 <body>
-  
+
   <header class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Home <strong>Fitness</strong></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Cardio
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Weights</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Accessories</a>
-            </li>
-          </ul>
-          <form method="GET" action="" class="d-flex">
-            <input class="form-control me-2" type="text" name="q" placeholder="Search our products" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-          <li class="list-inline-item dropdown">
-            <a href="#" class="text-white nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">My Account</p>
-              </div>
+      <a class="navbar-brand" href="{ url 'home' }">Home <strong>Fitness</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown"
+        aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarDropdown">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="logo-font nav-link dropdown-toggle text-white mr-4" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="true">
+              All Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-              {% if request.user.is_authenticated %}
-              {% if request.user.is_superuser %}
-              <a href="" class="dropdown-item">Product Management</a>
-              {% endif %}
-              <a href="" class="dropdown-item">My Profile</a>
-              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-              {% else %}
-              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-              {% endif %}
+            <div class="dropdown-menu border-0" aria-labelledby="navbarDropdownMenuLink">
+              <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+              <a href="{% url 'products' %}" class="dropdown-item">By Price</a>
+              <a href="{% url 'products' %}" class="dropdown-item">By Rating</a>
+              <a href="{% url 'products' %}" class="dropdown-item">By Category</a>
             </div>
           </li>
-          <li class="list-inline-item">
-
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="">
-              <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                <p class="my-0">
-                  {% if grand_total %}
-                  ${{ grand_total|floatformat:2 }}
-                  {% else %}
-                  £0.00
-                  {% endif %}
-                </p>
-              </div>
+          <li class="nav-item dropdown">
+            <a class="logo-font nav-link dropdown-toggle text-white mr-4" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="true">Cardio
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="cardio-link">
+              <a href="" class="dropdown-item">All Products</a>
+              <a href="" class="dropdown-item">Treadmills</a>
+              <a href="" class="dropdown-item">Rowing Machines</a>
+              <a href="" class="dropdown-item">Bikes</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="logo-font nav-link dropdown-toggle text-white mr-4" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="true">
+              Weights
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="weights-link">
+              <a href="" class="dropdown-item">All Produts</a>
+              <a href="" class="dropdown-item">Dumbells</a>
+              <a href="" class="dropdown-item">Kettlebells</a>
+              <a href="" class="dropdown-item">Bars</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="logo-font nav-link dropdown-toggle text-white mr-4" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="true">
+              Diet
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
+              <a href="" class="dropdown-item">All Products</a>
+              <a href="" class="dropdown-item">Protein Bars</a>
+              <a href="" class="dropdown-item">Gels</a>
+            </div>
           </li>
         </ul>
+        <form method="GET" action="" class="d-flex">
+          <input class="form-control me-2" type="text" name="q" placeholder="Search our products" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+      <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+        <li class="list-inline-item dropdown">
+          <a href="#" class="text-white nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <div class="text-center">
+              <div><i class="fas fa-user fa-lg"></i></div>
+              <p class="my-0">My Account</p>
+            </div>
+          </a>
+          <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <a href="" class="dropdown-item">Product Management</a>
+            {% endif %}
+            <a href="" class="dropdown-item">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
+          </div>
+        </li>
+        <li class="list-inline-item">
+
+          <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="">
+            <div class="text-center">
+              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+              <p class="my-0">
+                {% if grand_total %}
+                ${{ grand_total|floatformat:2 }}
+                {% else %}
+                £0.00
+                {% endif %}
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
       </div>
     </nav>
   </header>
-  
+
 
   {% block page_header %}
-  
+
   {% endblock %}
   {% block content %}
 
