@@ -1,0 +1,26 @@
+[
+    {
+        "model":"products.category",
+        "pk":1,
+        "fields":{
+            "name":"treadmill",
+            "friendly_name":"Treadmill"
+        }
+    },
+    {
+        "model":"products.category",
+        "pk":2,
+        "fields":{
+            "name":"dumbell",
+            "friendly_name":"Dumbell"
+        }
+    },
+    {
+        "model":"products.category",
+        "pk":3,
+        "fields":{
+            "name":"yoga_mat",
+            "friendly_name":"Yoga Mat"
+        }
+    }
+]
