@@ -22,10 +22,10 @@
                 aria-haspopup="true" aria-expanded="false">Cardio
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="cardio-link">
-                <a href="{% url 'products' %}?category=treadmill" class="dropdown-item">Treadmills</a>
-                <a href="{% url 'products' %}?category=rowing_machine" class="dropdown-item">Rowing Machines</a>
+                <a href="{% url 'products' %}?category=treadmills" class="dropdown-item">Treadmills</a>
+                <a href="{% url 'products' %}?category=rowing_machines" class="dropdown-item">Rowing Machines</a>
                 <a href="{% url 'products' %}?category=bikes" class="dropdown-item">Bikes</a>
-                <a href="{% url 'products' %}?category=treadmill,rowing_machine,bikes" class="dropdown-item">All
+                <a href="{% url 'products' %}?category=treadmills,rowing_machines,bikes" class="dropdown-item">All
                     Cardio</a>
             </div>
         </li>
@@ -42,14 +42,14 @@
 </div>
 </li>
 <li class="nav-item dropdown">
-    <a class="logo-font nav-link text-white" href="#" id="accessories-link" data-toggle="dropdown"
+    <a class="logo-font nav-link text-white" href="#" id="diet-link" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
         Diet
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="diet-link">
         <a href="{% url 'products'% }?category=protein_bars" class="dropdown-item">Protein Bars</a>
         <a href="{% url 'products'% }?category=gels" class="dropdown-item">Gels</a>
-        <a href="{% url 'products'% }?category=bars,gels" class="dropdown-item">All Diet Products</a>
+        <a href="{% url 'products'% }?category=protein_bars,gels" class="dropdown-item">All Diet Products</a>
         </div>
 </li>
 
@@ -58,10 +58,10 @@
         aria-haspopup="true" aria-expanded="false">
         Accessories
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="diet-link">
-        <a href="{% url 'products'% }?category=protein_bars" class="dropdown-item">Yoga Mats</a>
-        <a href="{% url 'products'% }?category=gels" class="dropdown-item">Skipping ropes</a>
-        <a href="{% url 'products'% }?category=bars,gels" class="dropdown-item">Bar locks</a>
+    <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
+        <a href="{% url 'products'% }?category=yoga_mats" class="dropdown-item">Yoga Mats</a>
+        <a href="{% url 'products'% }?category=skipping_ropes" class="dropdown-item">Skipping ropes</a>
+        <a href="{% url 'products'% }?category=yoga_mats,skipping_ropes" class="dropdown-item">Bar locks</a>
         </div>
 </li>
 </ul>
