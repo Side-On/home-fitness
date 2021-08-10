@@ -1,34 +1,88 @@
-[
-    {
-        "pk":1,
-        "model":"products.category",
-        "fields":{
-            "name":"cardio",
-            "friendly_name":"Cardio"
+[{
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "treadmill",
+            "friendly_name": "Treadmill"
+        }
+    }, {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "rowing_machines",
+            "friendly_name": "Rowing Machines"
+        }
+    }, {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "bikes",
+            "friendly_name": "Bikes"
+        }
+    }, {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "treadmill",
+            "friendly_name": "Cardio"
         }
     },
     {
-        "pk":2,
-        "model":"products.category",
-        "fields":{
-            "name":"weights",
-            "friendly_name":"Weights"
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "dumbells",
+            "friendly_name": "Dumbells"
         }
     },
     {
-        "pk":3,
-        "model":"products.category",
-        "fields":{
-            "name":"diet",
-            "friendly_name":"Diet"
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "kettlebells",
+            "friendly_name": "Kettlebells"
         }
-    },
-    {
-        "pk":4,
-        "model":"products.category",
-        "fields":{
-            "name":"accessories",
-            "friendly_name":"Accessories"
+    }, {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "bars",
+            "friendly_name": "Bars"
+        }
+    }, {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "protein_bars",
+            "friendly_name": "Protein Bars"
+        }
+    },  {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "gels",
+            "friendly_name": "Gels"
+        }
+    }, {
+        "pk": 10,
+        "model": "products.category",
+        "fields": {
+            "name": "yoga_mats",
+            "friendly_name": "Yoga Mats"
+        }
+    }, {
+        "pk": 11,
+        "model": "products.category",
+        "fields": {
+            "name": "skipping_ropes",
+            "friendly_name": "Skipping Ropes"
+        }
+    }, {
+        "pk": 12,
+        "model": "products.category",
+        "fields": {
+            "name": "bar_locks",
+            "friendly_name": "Bar Locks"
         }
     }
 ]

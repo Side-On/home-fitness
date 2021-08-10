@@ -3,7 +3,7 @@
         "model": "products.product",
         "fields": {
             "category": 1,
-            "name": "Treadmill",
+            "name": "treadmill",
             "brand": "Quick Feet",
             "description": "Get those legs moving with the step counting machine",
             "price": 109.99,
@@ -15,7 +15,7 @@
         "pk": 2,
         "model": "products.product",
         "fields": {
-            "category": 2,
+            "category": 5,
             "name": "Dumbell",
             "brand": "Hulk",
             "description": "Bulking up? This is what you need, come in all sizes for whatever your gains are",
@@ -27,7 +27,7 @@
 
     },
     {
-        "pk": 3,
+        "pk": 8,
         "model": "products.product",
         "fields": {
             "category": 3,
@@ -43,7 +43,7 @@
         "pk": 4,
         "model": "products.product",
         "fields": {
-            "category": 4,
+            "category": 10,
             "name": "Yoga Mat",
             "brand": "Horizon",
             "description": "Let this mat support you through your yoga session",
