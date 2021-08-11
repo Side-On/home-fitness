@@ -21,6 +21,9 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0 text-white">{{ product.name }}</p>
                     <p class="mb-0 text-white">{{ product.brand }}</p>
+                    <p class="small"><a href="{% url 'products' %}?category={{ product.category.name }}">
+                        <small class="text-muted text-white"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</small>
+                    </a></p>
                     <p class="lead mb-0 text-left text-white font-weight-bold">£{{ product.price }}</p>
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
