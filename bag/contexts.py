@@ -20,7 +20,7 @@ def bag_contents(request):
                 'quantity': item_data,
                 'product': product,
             })
-            
+
         else:
             product = get_object_or_404(Product, pk=item_id)
             for weight, quantity in item_data['items_by_weight'].items():
