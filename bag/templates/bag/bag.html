@@ -23,10 +23,65 @@
         <div class="row">
             <div class="col">
                 {% if bag_items %}
-                    <div class="table-responsive rounded"></div>
+                    <div class="table-responsive rounded">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-white">
+                                <tr>
+                                    <th scope="col">Product Info</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+
+                            {% for item in bag_items %}
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid rounded" src="">
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 text-white"><strong>{{ item.product.name }}</strong></p>
+                                        <p class="my-0 small text-muted">Brand: {{ item.product.brand }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 text-white">£{{ item.product.price }}</p>
+                                    </td>
+                                    <td class="py-3 w-25">
+                                        <p class="my-0 text-white">{{ item.quantity }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 text-white">£{{ item.product.price }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <h6 class="text-white"><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                                    <h4 class="mt-4 text-white"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-white rounded-0 btn-lg">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left text-white"></i>
+                                        </span>
+                                        <span class="text-uppercase text-white">Keep Shopping</span>
+                                    </a>
+                                    <a href="" class="btn btn-white rounded-0 btn-lg text-white">
+                                        <span class="text-uppercase text-white">Secure Checkout</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock text-white"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <p class="lead mb-5 text-white">Your bag is empty.</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-white text-white rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left text-white"></i>
                         </span>
