@@ -23,7 +23,7 @@ class Order(models.Model):
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
     def _generate_order_number(self):
-        
+
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
@@ -50,6 +50,6 @@ class OrderLineItem(models.Model):
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
-        
+
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
