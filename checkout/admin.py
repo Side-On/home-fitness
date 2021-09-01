@@ -12,7 +12,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     readonly_fields = ('order_number', 'date',
                        'order_total',
-                       'grand_total','original_bag', 
+                       'grand_total', 'original_bag',
                        'stripe_pid')
 
     fields = ('order_number', 'date', 'full_name',
