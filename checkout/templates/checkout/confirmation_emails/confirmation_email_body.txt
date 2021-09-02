@@ -1,0 +1,24 @@
+{{ order.full_name }}
+
+This is to confirm that your order for Home Fitness has been successfully processed!
+
+Order Information:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.order_total }}
+Grand Total: £{{ order.grand_total }}
+
+You've selected to send your fitness gear to {{ order.street_address1 }} in {{ order.town_or_city }}
+
+If we need to contact you about anything, we've got your current number as {{ order.phone_number }}
+
+If you've got any queries for need to change anything with the order, please let us know at {{ contact_email }}
+
+That's all for now then! 
+
+Sit tight and your order will be with you shortly.
+
+Kind regards,
+Home Fitness
