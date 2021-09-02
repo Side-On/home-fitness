@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-9(y*62b5w3(7@d*50^hsrz!abbax(ju!*ebhs&9c=0jnrua=i5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['side-on-home-fitness.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -128,9 +128,17 @@ WSGI_APPLICATION = 'home_fitness.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': dj_database_url.parse('postgres://ficttfdxndvvqu:3aad6b8c473286ef15618bd2bc2e3c3c96a1383037046d96f8090d6587cdf367@ec2-54-217-195-234.eu-west-1.compute.amazonaws.com:5432/d5pmbu6e2tqt6q')
-}
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABSE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
