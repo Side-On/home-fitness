@@ -7,6 +7,7 @@
             "brand": "Quick Feet",
             "description": "Get those legs moving with the step counting machine",
             "price": 109.99,
+            "weight": "",
             "rating": 4.9,
             "image": ""
         }
@@ -20,6 +21,7 @@
             "brand": "Healthy Life Fitness",
             "description": "In training to rush to the bus, without actually running?",
             "price": 79.99,
+            "weight": "",
             "rating": 3.2,
             "image": ""
         }
@@ -33,6 +35,7 @@
             "brand": "Rownan",
             "description": "The latest in rowing technology. This offers over 10 different training routines and exercises",
             "price": 165.99,
+            "weight": "",
             "rating": 4.3,
             "image": ""
         }
@@ -47,6 +50,7 @@
             "brand": "Push it",
             "description": "This will get you trained to at least bronze medal standard",
             "price": 89.99,
+            "weight": "",
             "rating": 3.3,
             "image": ""
         }
@@ -60,6 +64,7 @@
             "brand": "Heels to Wheels",
             "description": "Love the feeling of cycling, but hate getting somewhere?",
             "price": 45.99,
+            "weight": "",
             "rating": 4,
             "image": ""
         }
@@ -73,6 +78,7 @@
             "brand": "Gale-force Wins",
             "description": "Feel the wind in your face because this has a vent at the front which cools you down, and gives you the feeling of actually riding a bike",
             "price": 109.99,
+            "weight": "",
             "rating": 4.9,
             "image": ""
         }
@@ -86,7 +92,7 @@
             "brand": "Strictly Arms",
             "description": "Build bigger arms",
             "price": 14.99,
-            "weight": "True",
+            "weight": "",
             "rating": 4.8,
             "image": ""
         }
@@ -100,7 +106,7 @@
             "brand": "Gym Crazy",
             "description": "Perfect for wanting the more toned look and definition",
             "price": 10.99,
-            "weight": "True",
+            "weight": "",
             "rating": 4.1,
             "image": ""
         }
@@ -114,6 +120,7 @@
             "brand": "Boilers",
             "description": "This is all you need for that all over home workout",
             "price": 25.99,
+            "weight": "",
             "rating": 3.2,
             "image": ""
         }
@@ -127,6 +134,7 @@
             "brand": "Kettle Swing",
             "description": "A great piece of equipment to have at home for any kind of workout.",
             "price": 31.99,
+            "weight": "",
             "rating": 4.9,
             "image": ""
         }
@@ -140,6 +148,7 @@
             "brand": "All Bar None",
             "description": "All you need it to twist whatever weight you have on and away you go.",
             "price": 1.99,
+            "weight": "",
             "rating": 4,
             "image": ""
         }
@@ -153,6 +162,7 @@
             "brand": "Your Barred",
             "description": "Strong metal bar which will hold up to 40kg, not too bad for a piece of home kit.",
             "price": 1.99,
+            "weight": "",
             "rating": 4.3,
             "image": ""
         }
@@ -166,6 +176,7 @@
             "brand": "Snack Attack",
             "description": "Perfect for if you need that extra bit of protein throughout the day",
             "price": 1.99,
+            "weight": "",
             "rating": 4,
             "image": ""
         }
@@ -179,6 +190,7 @@
             "brand": "Booster",
             "description": "Essentially all the protein you need in a day, in one bar",
             "price": 2.99,
+            "weight": "",
             "rating": 5,
             "image": ""
         }
@@ -192,6 +204,7 @@
             "brand": "Gelous",
             "description": "A great carb hit for long runs or exerises.",
             "price": 0.99,
+            "weight": "",
             "rating": 4,
             "image": ""
         }
@@ -205,6 +218,7 @@
             "brand": "Liquid Energy",
             "description": "A quick fix to anybody looking to do a long period of running.",
             "price": 0.79,
+            "weight": "",
             "rating": 4,
             "image": ""
         }
@@ -218,6 +232,7 @@
             "brand": "Horizon",
             "description": "The best yoga partner you can wish for.",
             "price": 16.99,
+            "weight": "",
             "rating": 3.9,
             "image": ""
         }
@@ -231,6 +246,7 @@
             "brand": "You-ga",
             "description": "Lose yourself in the mind space and relax while you workout your mind and soul.",
             "price": 19.99,
+            "weight": "",
             "rating": 4.7,
             "image": ""
         }
@@ -244,6 +260,7 @@
             "brand": "Hop-to-It",
             "description": "Get yourself moving with the most active way of hopping up and down",
             "price": 14.99,
+            "weight": "",
             "rating": 3.7,
             "image": ""
         }
@@ -257,6 +274,7 @@
             "brand": "Skippy",
             "description": "Perfect for if you need that extra bit of protein throughout the day",
             "price": 1.99,
+            "weight": "",
             "rating": 4,
             "image": ""
         }
