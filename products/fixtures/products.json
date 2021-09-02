@@ -86,7 +86,7 @@
             "brand": "Strictly Arms",
             "description": "Build bigger arms",
             "price": 14.99,
-            "weight": 2.5,
+            "weight": "True",
             "rating": 4.8,
             "image": ""
         }
@@ -100,7 +100,7 @@
             "brand": "Gym Crazy",
             "description": "Perfect for wanting the more toned look and definition",
             "price": 10.99,
-            "weight": 2.5,
+            "weight": "True",
             "rating": 4.1,
             "image": ""
         }
