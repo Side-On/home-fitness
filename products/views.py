@@ -73,7 +73,7 @@ def product_detail(request, product_id):
 def add_product(request):
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you can only do that if you are an admin)
+        messages.error(request, 'Sorry, you can only do that if you are an admin')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -98,7 +98,7 @@ def add_product(request):
 def edit_product(request, product_id):
     
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you can only do that if you are an admin)
+        messages.error(request, 'Sorry, you can only do that if you are an admin')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -125,9 +125,9 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    
+
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you can only do that if you are an admin)
+        messages.error(request, 'Sorry, you can only do that if you are an admin')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
