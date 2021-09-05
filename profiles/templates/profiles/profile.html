@@ -25,7 +25,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-6">
-                <p class="text-muted">Default Delivery Information</p>
+                <p class="text-white">Default Delivery Information</p>
                 <form action="" class="mt-3" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy}}
@@ -34,10 +34,10 @@
             </div>
             <div class="col-12 col-lg-6">
                 <p class="text-white">Order History</p>
-                <div class="order-history table-responsive">
+                <div class="order-history table-responsive text-white">
                     <table class="table table-sm table-borderless">
                         <thead>
-                            <tr>
+                            <tr class="text-white">
                                 <th>Order Number</th>
                                 <th>Date</th>
                                 <th>Items</th>
@@ -53,7 +53,7 @@
                                 </td>
                                 <td>{{ order.date }}</td>
                                 <td>
-                                    <ul class="list-unstyled">
+                                    <ul class="list-unstyled text-white">
                                         {% for item in order.lineitems.all %}
                                         <li class="small">
                                             {% if item.product.weight %}
@@ -68,7 +68,28 @@
                             {% endfor %}
                         </tbody>
                     </table>
+
                 </div>
             </div>
+            
+            
+            <div class="col-12 col-lg-6">
+                <p class="text-white">Default Delivery Information</p>
+                <form action="" class="mt-3" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form|crispy}}
+                    <button class="btn btn-white btn-outline-white text-white rounded text-uppercase float-right">Update Information</button>
+                </form>
+            </div>
+            <h1>Addresses:</h1>
+            {% for address in addresses %}
+                {{ address.phone_number }}
+                {{ address.street_address1 }}
+                {{ address.street_address2 }}
+                {{ address.town_or_city }}
+                {{ address.county }}
+                {{ address.postcode }}
+                {{ address.country }}
+            {% endfor %}
         </div>
 {% endblock %}
