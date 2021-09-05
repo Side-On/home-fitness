@@ -215,3 +215,11 @@ input[name='q']::placeholder {
     border-color: red;
     border-radius: 0;
 }
+
+.product.price {
+    color:black;
+}
+
+.table {
+    color: white;
+}
