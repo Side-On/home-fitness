@@ -31,7 +31,10 @@ def create_or_update_user_profile(sender, instance, created, **kargs):
 
 class Address(models.Model):
 
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    class Meta:
+        verbose_name_plural = 'Addresses'
+
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name="addresses")
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     street_address1 = models.CharField(max_length=80, null=False, blank=True)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
@@ -41,4 +44,4 @@ class Address(models.Model):
     country = CountryField(blank_label='Country', null=True, blank=True)
 
     def __str__(self):
-        return self.address
+        return self.user.default_street_address1
