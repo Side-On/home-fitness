@@ -24,4 +24,44 @@
         </div>
     </div>
 </div>
+
+<div class="container text-center">
+    <h1 class="">Shop by Category</h1>
+    <hr>
+    <p>Browse the below categories and see what we have for each!</p>
+    <div class="row">
+        <div class="col-4">
+            <a href="{% url 'products' %}?category=treadmills,rowing_machines,bikes">
+            <h5>Cardio</h5>
+                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+            </a>
+        </div>
+        
+    </div><div class="row">
+        <div class="col-4">
+            <a href="{% url 'products' %}?category=bars,dumbells,kettlebells">
+            <h5>Weights</h5>
+                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+            </a>
+        </div>
+        
+    </div><div class="row">
+        <div class="col-4">
+            <a href="{% url 'products' %}?category=protein_bars,gels">
+            <h5>Diet</h5>
+                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+            </a>
+        </div>
+        
+    </div><div class="row">
+        <div class="col-4">
+            <a href="{% url 'products' %}?category=yoga,skipping_ropes">
+            <h5>Accessories</h5>
+                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+            </a>
+        </div>
+        
+    </div>
+</div>
+
 {% endblock %}
