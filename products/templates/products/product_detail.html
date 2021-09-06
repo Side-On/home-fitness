@@ -108,7 +108,16 @@
                 <input type="submit" class="btn rounded-0 text-white" value="Add Review">
             </form>
         {% endif %}
+
+        
+</div>
     </div>
+    {% for review in reviews %}
+        <p class="text-black">{{ review.review_title }}</p>
+        <p>{{ review.review_comment }}</p>
+        <p>{{ review.user }}</p>
+        <br>
+    {% endfor %}
 {% endblock %}
 
 {% block postloadjs %}
