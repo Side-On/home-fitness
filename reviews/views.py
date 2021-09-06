@@ -30,6 +30,7 @@ def add_review(request, product_id):
                 return redirect('product_details', product_id)
         else:
             form = UserReviewForm()
+        return render(request, 'products/products_details.html', {"form": form})
 
     else:
         messages.error(request, 'Oops! You need to be signed in to leave a review')
