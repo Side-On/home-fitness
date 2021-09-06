@@ -14,7 +14,7 @@ def add_review(request, product_id):
     product = Product.objects.get(id=product_id)
     if not request.user.is_authenticated:
         messages.error(request, 'Oops! Only signed in users can leave a review')
-    return redirect(reverse('home'))
+        return redirect(reverse('home'))
 
     if request.user.is_authenticated:
         if request.method == "POST":
@@ -31,6 +31,6 @@ def add_review(request, product_id):
         else:
             form = UserReviewForm()
 
-    else: 
+    else:
         messages.error(request, 'Oops! You need to be signed in to leave a review')
         return redirect('product_details', product_id)
