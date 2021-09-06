@@ -22,8 +22,8 @@ def add_review(request, product_id):
             if form.is_valid():
                 review = form.save()
                 review.user = request.user
-                review.title = request.POST['title']
-                review.comment = request.POST['comment']
+                review.title = request.POST['review-title']
+                review.comment = request.POST['review-comment']
                 review.product = product
                 review.save()
                 messages.success(request, "You've left a review! Thank you")

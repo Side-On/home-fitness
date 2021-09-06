@@ -14,4 +14,3 @@ class Review(models.Model):
 
     def __str__(self):
         return f'Review made by {self.user} about the {self.product.name}'
-

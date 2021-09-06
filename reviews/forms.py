@@ -1,9 +1,9 @@
 from django import forms
-from .models import *
+from .models import Review
 
 
 class UserReviewForm(forms.ModelForm):
 
     class Meta:
         model: Review
-        fields = ('title', 'comment')
+        fields = ('review-title', 'review-comment')
