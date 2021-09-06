@@ -59,3 +59,17 @@ def edit_review(request, product_id, review_id):
             return redirect('product_detail', product_id)
     else:
         return redirect('account_login')
+
+
+@login_required
+def delete_review(request, product_id, review_id):
+    if request.user.is_authenticated:
+        product = Product.objects.get(id=product_id)
+        review = get_object_or_404(Review, product=product, pk=review_id)
+        
+        if request.user == review.user:
+            review.delete()
+            messages.success(request, 'Review has been deleted')
+        return redirect('product_detail', product_id)
+    else:
+        return redirect('account_login')
