@@ -20,18 +20,17 @@ def add_review(request, product_id):
         if request.method == "POST":
             form = UserReviewForm(request.POST)
             if form.is_valid():
-                review = form.save()
+                review = form.save(commit=False)
                 review.user = request.user
                 review.title = request.POST['review_title']
                 review.comment = request.POST['review_comment']
                 review.product = product
                 review.save()
                 messages.success(request, "You've left a review! Thank you")
-                return redirect('product_details', product_id)
+                return redirect('product_detail', product.id)
         else:
             form = UserReviewForm()
-        return render(request, 'products/products_details.html', {"form": form})
-
+        return render(request, 'products/product_detail.html', {"form": form})
     else:
         messages.error(request, 'Oops! You need to be signed in to leave a review')
         return redirect('product_details', product_id)
