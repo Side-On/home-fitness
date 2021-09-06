@@ -34,7 +34,7 @@ class Address(models.Model):
     class Meta:
         verbose_name_plural = 'Addresses'
 
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name="addresses")
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name="addresses", null=True, blank=True)
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     street_address1 = models.CharField(max_length=80, null=False, blank=True)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
@@ -44,4 +44,4 @@ class Address(models.Model):
     country = CountryField(blank_label='Country', null=True, blank=True)
 
     def __str__(self):
-        return self.user.default_street_address1
+        return self.street_address1
