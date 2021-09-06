@@ -33,19 +33,19 @@ Users with accounts should be rewarded and given things which non-registered use
 
 ## Features
 
-- Checkout
+- Checkout - User can take everything that's in their shopping bag and look at the summary of what they've got all in one place. It'll also show the total amount of the contents. They can then make a secure payment, when they are ready to purchase. They can also edit the amount they want of each item, and also remove any items they no longer want.
 
 - Profile page
+This is where the user can look at all of their past orders. As well as look at their other addresses used when purchasing their items. 
 
-- Select a delivery address at the checkout
+- Select a delivery address at the checkout and autofill
+A user can have more than one delivery address. And to save them from having to enter a new one each time, this feature will save it for them for later use.
 
-- Autofills delivery information
+- Shopping bag - Updated whenever a new product is selected. This appears in the top right of the screen and shows the user what's currently in the shopping bag. It also shows a small image of what the product is, and what the running total is.
 
-- Shopping bag - Updated whenever a new product is selected
+- Emails - Sent whenever a new user signs up to confirm. another is sent whenever an order has been made. This is to give users a record of whatever they've previously ordered.
 
-- Emails - Sent whenever a new user signs up to confirm. another is sent whenever an order has been made
-
-- Admin - section of the site where the site owner can look at users emails, addresses etc. Admin can also add remove and edit new products, including adding images
+- Admin - section of the site where the site owner can look at users emails, addresses etc. Admin can also add remove and edit new products, including adding images.
 
 - 
 
@@ -156,7 +156,43 @@ To avoid this, along with other files which contain sensitive information, I cre
 - This was a package needed to tell Heroku that that app is a web application.I did this by entering pip3 install Gunicorn
 - Heroku needs a Procfile to tell it how to run the app as well. I made one by created a new folder, not within any of the apps or other files on the project. (can be done by entering touch Procfile in the command line). 
 - Within the Procfile, I added on the first line: web: gunicorn (your appname) wsgi:application.
+
+
+### AWS (Amazon Web Service)
+- Create a free AWS account.
+- Create a bucket, which stores media and static files
+- Name the bucket and select with region you're closest to
+- Make the bucket public by unchecking the box
+- Create the bucket
+
+<br> 
+
+- Go to the bucket properties and turn on the static web hosting settings
+- Match the placeholders in the 'index' and 'error' fields
+- Save
+- Find the bucket permission settings put this code into the field: 
+[
+  [
+      {
+          "AllowedHeaders": [
+              "Authorization"
+          ],
+          "AllowedMethods": [
+              "GET"
+          ],
+          "AllowedOrigins": [
+              "*"
+          ],
+          "ExposedHeaders": [
+
+          ]
+      }
+  ]
+]
+
 - 
+
+
 
 
 -----
