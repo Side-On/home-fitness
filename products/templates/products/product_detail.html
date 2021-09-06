@@ -116,6 +116,7 @@
         <p class="text-black">{{ review.review_title }}</p>
         <p>{{ review.review_comment }}</p>
         <p>{{ review.user }}</p>
+        <a href="{% url 'edit_review' product.id review.id %}">Edit this review</a>
         <br>
     {% endfor %}
 {% endblock %}
