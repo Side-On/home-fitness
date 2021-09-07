@@ -16,7 +16,8 @@
                 <h1 class="display-4 logo-font text-white">The new equipment is here</h1>
                 <div class="my-5">
                     <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-white rounded-0 text-uppercase py-3">Shop
+                        <a href="{% url 'products' %}"
+                            class="shop-now-button btn btn-lg text-white rounded-0 text-uppercase py-3">Shop
                             Now</a>
                     </h4>
                 </div>
@@ -25,43 +26,59 @@
     </div>
 </div>
 
-<div class="container text-center">
-    <h1 class="">Shop by Category</h1>
+<div class="container-fluid">
+
+    <h1 class="text-center">Shop by Category</h1>
     <hr>
-    <p>Browse the below categories and see what we have for each!</p>
+    <p class="text-center">Browse the below categories and see what we have for each!</p>
     <div class="row">
-        <div class="col-4">
+        <div class="col card bg-dark text-white">
             <a href="{% url 'products' %}?category=treadmills,rowing_machines,bikes">
-            <h5>Cardio</h5>
-                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <img src="..." class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Cardio</h5>
+                    <p class="card-text">Get you running and moving faster</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
             </a>
         </div>
-        
-    </div><div class="row">
-        <div class="col-4">
+
+        <div class="col card bg-dark text-white">
             <a href="{% url 'products' %}?category=bars,dumbells,kettlebells">
-            <h5>Weights</h5>
-                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <img src="..." class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Weights</h5>
+                    <p class="card-text">Pump those arms</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
             </a>
         </div>
-        
-    </div><div class="row">
-        <div class="col-4">
+
+
+        <div class="col card bg-dark text-white">
             <a href="{% url 'products' %}?category=protein_bars,gels">
-            <h5>Diet</h5>
-                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <img src="..." class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Diet</h5>
+                    <p class="card-text">All your dietary needs to get those gains</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
             </a>
         </div>
-        
-    </div><div class="row">
-        <div class="col-4">
+
+
+        <div class="col card bg-dark text-white">
             <a href="{% url 'products' %}?category=yoga,skipping_ropes">
-            <h5>Accessories</h5>
-                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <img src="..." class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Accessories</h5>
+                    <p class="card-text">Everything you need to get started</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
             </a>
         </div>
-        
     </div>
+</div>
 </div>
 
 {% endblock %}
