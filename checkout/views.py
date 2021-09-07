@@ -7,7 +7,7 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.forms import UserProfileForm
-from profiles.models import UserProfile
+from profiles.models import UserProfile, Address
 from bag.contexts import bag_contents
 
 import stripe
@@ -126,10 +126,12 @@ def checkout(request):
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
-
+    
+    addresses = profile.addresses.all()
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
+        'addresses': addresses,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
