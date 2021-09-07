@@ -72,15 +72,6 @@
                 </div>
             </div>
             
-            
-            <div class="col-12 col-lg-6">
-                <p class="text-white">Default Delivery Information</p>
-                <form action="" class="mt-3" method="POST" id="profile-update-form">
-                    {% csrf_token %}
-                    {{ form|crispy}}
-                    <button class="btn btn-white btn-outline-white text-white rounded text-uppercase float-right">Update Information</button>
-                </form>
-            </div>
             <h1>Addresses:</h1>
             {% for address in addresses %}
                 {{ address.phone_number }}
