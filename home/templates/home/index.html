@@ -27,58 +27,63 @@
 </div>
 
 <div class="container-fluid">
-
     <h1 class="text-center">Shop by Category</h1>
     <hr>
     <p class="text-center">Browse the below categories and see what we have for each!</p>
     <div class="row">
-        <div class="col card bg-dark text-white">
+        <div class="container col card bg-dark text-white">
             <a href="{% url 'products' %}?category=treadmills,rowing_machines,bikes">
-                <img src="..." class="card-img" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Cardio</h5>
-                    <p class="card-text">Get you running and moving faster</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
+                <img src="/media/cardio-index.jpg" class="card-img" alt="...">
+                <div class="image-overlay">
+                    <div class="card-img-overlay text">
+                        <h5 class="card-title">Cardio</h5>
+                        <p class="card-text">Get you running and moving faster</p>
+                    </div>
                 </div>
             </a>
         </div>
 
-        <div class="col card bg-dark text-white">
+        <div class="container col card bg-dark text-white">
             <a href="{% url 'products' %}?category=bars,dumbells,kettlebells">
-                <img src="..." class="card-img" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Weights</h5>
-                    <p class="card-text">Pump those arms</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
+                <img src="/media/weights-index.jpg" class="card-img" alt="...">
+                <div class="image-overlay">
+                    <div class="card-img-overlay text">
+                        <h5 class="card-title">Weights</h5>
+                        <p class="card-text">Pump those arms</p>
+                    </div>
                 </div>
             </a>
         </div>
 
 
-        <div class="col card bg-dark text-white">
+        <div class="container col card bg-dark text-white">
             <a href="{% url 'products' %}?category=protein_bars,gels">
-                <img src="..." class="card-img" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Diet</h5>
-                    <p class="card-text">All your dietary needs to get those gains</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
+                <img src="/media/diet-index.jpg" class="card-img" alt="...">
+                <div class="image-overlay">
+                    <div class="card-img-overlay text">
+                        <h5 class="card-title">Diet</h5>
+                        <p class="card-text">All your dietary needs to get those gains</p>
+                    </div>
                 </div>
             </a>
         </div>
 
 
-        <div class="col card bg-dark text-white">
+        <div class="container col card bg-dark text-white">
             <a href="{% url 'products' %}?category=yoga,skipping_ropes">
-                <img src="..." class="card-img" alt="...">
-                <div class="card-img-overlay">
+                <img src="/media/accessories-index.jpg" class="card-img" alt="...">
+                <div class="image-overlay">
+                    <div class="card-img-overlay text">
                     <h5 class="card-title">Accessories</h5>
                     <p class="card-text">Everything you need to get started</p>
                     <p class="card-text">Last updated 3 mins ago</p>
+                </div>
                 </div>
             </a>
         </div>
     </div>
 </div>
-</div>
+
+
 
 {% endblock %}
