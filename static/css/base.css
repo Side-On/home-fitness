@@ -17,6 +17,13 @@ body {
     width: 1.5rem;
 }
 
+.navbar-logo {
+    position: relative;
+    width: 170px;
+    left: 15px;
+    background-size: contain;
+}
+
 .navbar-padding {
     padding-top: 30px;
 }
@@ -216,7 +223,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-.product.price {
+.product-price {
     color:black;
 }
 
@@ -251,4 +258,8 @@ input[name='q']::placeholder {
    -ms-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%);
    text-align: center;
+ }
+
+ .index-card {
+     width: 20%;
  }
