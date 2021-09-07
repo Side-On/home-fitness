@@ -99,9 +99,10 @@
 </div>
 
 {% if user.is_authenticated %}
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#leaveReview" aria-expanded="false" aria-controls="collapseExample">
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#leaveReview" aria-expanded="false"
+    aria-controls="collapseExample">
     Leave a review
-  </button>
+</button>
 <div class="collapse" id="leaveReview">
     <form action="{% url 'add_review' product.id %}" method="POST">
         {% csrf_token %}
@@ -117,7 +118,7 @@
 
 <p>
 
-  </p>
+</p>
 </div>
 <div class="review-section text-center">
     {% for review in reviews %}
