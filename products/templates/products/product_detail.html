@@ -163,7 +163,8 @@
                 <h5 class="card-title text-black" style="color: black;">{{ tips.fit_tip_title }}</h5>
                 <h6 class="card-subtitle mb-2" style="color: black;">{{ tips.fit_tip }}</h6>
                 <p class="card-text text-muted" style="color: black;">By: {{ tips.user }}</p>
-                <a href="{% url 'edit_fit_tip' product.id fit_tip.id %}" class="card-link">Edit</a>
+                <a href="{% url 'edit_fit_tip' product.id tips.id %}" class="card-link">Edit</a>
+                <a href="{% url 'delete_fit_tip' product.id tips.id %}" class="card-link">Delete</a>
             </div>
         </div>
     </div>

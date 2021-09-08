@@ -59,3 +59,16 @@ def edit_fit_tip(request, product_id, fit_tip_id):
             return redirect('product_detail', product_id)
     else:
         return redirect('account_login')
+
+@login_required
+def delete_fit_tip(request, product_id, fit_tip_id):
+    if request.user.is_authenticated:
+        product = Product.objects.get(id=product_id)
+        fit_tip = get_object_or_404(FitTip, product=product, pk=fit_tip_id)
+        
+        if request.user == fit_tip.user:
+            fit_tip.delete()
+            messages.success(request, 'Fit tip has been deleted')
+        return redirect('product_detail', product_id)
+    else:
+        return redirect('account_login')
