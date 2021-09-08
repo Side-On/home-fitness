@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% for story in stories %}
+    <p>{{ story.story_title }}</p>
+    <p>{{ story.story_content }}</p>
+{% endfor %}
