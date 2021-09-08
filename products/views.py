@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 from reviews.models import Review
+from fit_tips.models import FitTip
 
 
 # Create your views here.
@@ -65,10 +66,12 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product_id).order_by("id")
+    fit_tips = FitTip.objects.filter(product=product_id).order_by("id")
 
     context = {
         'product': product,
         'reviews': reviews,
+        'fit_tips': fit_tips,
     }
     return render(request, 'products/product_detail.html', context)
 
