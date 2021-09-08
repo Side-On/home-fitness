@@ -34,3 +34,28 @@ def add_fit_tip(request, product_id):
     else:
         messages.error(request, 'Oops! You need to be signed in to leave a tip')
         return redirect('product_details', product_id)
+
+
+@login_required
+def edit_fit_tip(request, product_id, fit_tip_id):
+
+    if request.user.is_authenticated:
+        product = Product.objects.get(id=product_id)
+        fit_tip = get_object_or_404(FitTip, product=product, pk=fit_tip_id)
+
+        if request.user == fit_tip.user or request.user.is_superuser:
+            if request.method == "POST":
+                form = FitTipForm(request.POST, instance=fit_tip)
+                if form.is_valid():
+                    data = form.save(commit=False)
+                    data.save()
+                    messages.success(request, "You've edited this tip")
+                    return redirect('product_detail', product_id)
+            else:
+                form = FitTipForm(instance=fit_tip)
+            return render(request, 'fit_tips/edit_fit_tip.html', {'form': form})
+        else:
+            messages.error(request, "Sorry you don't have permission to edit this fit tip")
+            return redirect('product_detail', product_id)
+    else:
+        return redirect('account_login')

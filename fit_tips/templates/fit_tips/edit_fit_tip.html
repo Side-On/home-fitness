@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="overlay"></div>
+
+    <div class="container container-pad mt-3 mb-5">
+        <div class="row">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form | crispy}}
+
+                <div class="inline-flex-pos float-end">
+                    <a href="{% url 'products' %}">Cancel editing</a>
+                    <input type="submit" class="btn" value="Edit Fit Tip">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

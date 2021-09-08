@@ -4,6 +4,7 @@ from products.models import Product
 
 # Create your models here.
 
+
 class FitTip(models.Model):
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="fit_tips")
