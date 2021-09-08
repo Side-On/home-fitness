@@ -138,37 +138,58 @@
 {% endif %}
 
 </div>
-<div class="center">
-    <!-- Show reviews -->
-    {% for review in reviews %}
-    <div class="review-section text-center">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title text-black" style="color: black;">{{ review.review_title }}</h5>
-                <h6 class="card-subtitle mb-2" style="color: black;">{{ review.review_comment }}</h6>
-                <p class="card-text text-muted" style="color: black;">By: {{ review.user }}</p>
-                <a href="{% url 'edit_review' product.id review.id %}" class="card-link">Edit</a>
-                <a href="{% url 'delete_review' product.id review.id %}" class="card-link">Delete</a>
+<div class="mx-auto" style="width: fit-content;">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" style="width: 50%;">
+            <a class="nav-link text-center active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true">Reviews</a>
+
+        </li>
+        <li class="nav-item" style="width: 50%;">
+            <a class="nav-link text-center" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                aria-selected="false">Fit Tips</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            {% for review in reviews %}
+            <div class="review-section text-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-black" style="color: black;">{{ review.review_title }}</h5>
+                        <h6 class="card-subtitle mb-2" style="color: black;">{{ review.review_comment }}</h6>
+                        <p class="card-text text-muted" style="color: black;">By: {{ review.user }}</p>
+                        {% if request.user == review.user or request.user.is_superuser %}
+                        <a href="{% url 'edit_review' product.id review.id %}" class="card-link">Edit</a>
+                        <a href="{% url 'delete_review' product.id review.id %}" class="card-link">Delete</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+            <!-- Show fit tips -->
+            <div class="center">
+                {% for tips in fit_tips %}
+                <div class="fit-tip-section text-center">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title text-black" style="color: black;">{{ tips.fit_tip_title }}</h5>
+                            <h6 class="card-subtitle mb-2" style="color: black;">{{ tips.fit_tip }}</h6>
+                            <p class="card-text text-muted" style="color: black;">By: {{ tips.user }}</p>
+                            {% if request.user == tips.user or request.user.is_superuser %}
+                            <a href="{% url 'edit_fit_tip' product.id tips.id %}" class="card-link">Edit</a>
+                            <a href="{% url 'delete_fit_tip' product.id tips.id %}" class="card-link">Delete</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
-    {% endfor %}
-</div>
-<!-- Show fit tips -->
-<div class="center">
-    {% for tips in fit_tips %}
-    <div class="fit-tip-section text-center">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title text-black" style="color: black;">{{ tips.fit_tip_title }}</h5>
-                <h6 class="card-subtitle mb-2" style="color: black;">{{ tips.fit_tip }}</h6>
-                <p class="card-text text-muted" style="color: black;">By: {{ tips.user }}</p>
-                <a href="{% url 'edit_fit_tip' product.id tips.id %}" class="card-link">Edit</a>
-                <a href="{% url 'delete_fit_tip' product.id tips.id %}" class="card-link">Delete</a>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
 </div>
 
 {% endblock %}
