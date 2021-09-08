@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'profiles',
     'storages',
     'reviews',
+    'fit_tips',
 ]
 
 MIDDLEWARE = [
