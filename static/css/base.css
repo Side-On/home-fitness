@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 html {
     height: 100%;
 }
@@ -6,6 +8,12 @@ body {
     height: 100%;
     background-color: black;
     color: white;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+}
+
+.hero-text {
+    font-size: 7rem;
 }
 
 /* from Bulma */
@@ -42,7 +50,26 @@ body {
     background-size: cover;
     position: relative;
   }
-  
+
+.cardio-hero-image {
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/cardio-hero.jpeg");
+}
+
+.diet-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/diet-hero.jpg");
+}
+
+.weights-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/weights-hero.jpeg");
+}
+
+.accessories-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/accessories-hero.jpeg");
+}
+
+.all-products-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/all-products-hero.jpg");
+}
   /* Place text in the middle of the image */
 .hero-text {
   text-align: center;
@@ -51,6 +78,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  outline: 2px solid white;
+  padding: 20px;
 }
 
 .container-fluid{
@@ -63,7 +92,7 @@ body {
 }
 
 .about-us {
-    font-size: large;
+    font-size: 3rem;
 }
 
 .update-link,
@@ -263,3 +292,9 @@ input[name='q']::placeholder {
    transform: translate(-50%, -50%);
    text-align: center;
  }
+
+ @media only screen and (max-width: 640px) {
+    .hero-text {
+      font-size: 4rem;
+    }
+  }
