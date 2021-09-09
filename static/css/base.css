@@ -9,7 +9,7 @@ body {
     background-color: black;
     color: white;
     font-family: 'Patrick Hand', cursive;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .hero-text {
@@ -293,8 +293,22 @@ input[name='q']::placeholder {
    text-align: center;
  }
 
+ .fit-tips {
+     color: black;
+     width: 50%;
+ }
  @media only screen and (max-width: 640px) {
     .hero-text {
       font-size: 4rem;
     }
   }
+
+
+@media (min-width: 1260px) {
+.navbar-expand-xl .navbar-collapse {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    }
+}

@@ -42,10 +42,10 @@ def all_products(request):
             category_string = request.GET['category']
             if category_string == 'treadmills,rowing_machines,bikes':
                 page_type = 'cardio'
-            
+
             if category_string == 'dumbells,kettlebells,bars':
                 page_type = 'weights'
-            
+
             if category_string == 'protein_bars,gels':
                 page_type = 'diet'
 
@@ -117,6 +117,7 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, product_id):

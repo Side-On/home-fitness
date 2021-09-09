@@ -119,22 +119,6 @@
     </form>
 </div>
 
-<!-- Leave a fit tip -->
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#leaveFitTip" aria-expanded="false"
-    aria-controls="collapseExample">
-    Leave a fit tip!
-</button>
-<div class="collapse" id="leaveFitTip">
-    <form action="{% url 'add_fit_tip' product.id %}" method="POST">
-        {% csrf_token %}
-        <label for="fit_tip_title">Fit Tip Title:</label>
-        <input type="text" id="fit_tip_title" name="fit_tip_title" class="form-control"
-            placeholder="Enter a fit tip title">
-        <textarea name="fit_tip" id="fit_tip" cols="30" rows="10" class="form-comtrol"
-            placeholder="Write your fit tip..."></textarea>
-        <input type="submit" class="btn rounded-0 text-white" value="Add Tip!">
-    </form>
-</div>
 {% endif %}
 
 </div>
@@ -144,10 +128,6 @@
             <a class="nav-link text-center active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
                 aria-selected="true">Reviews</a>
 
-        </li>
-        <li class="nav-item" style="width: 50%;">
-            <a class="nav-link text-center" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                aria-selected="false">Fit Tips</a>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
@@ -167,27 +147,6 @@
                 </div>
             </div>
             {% endfor %}
-        </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-
-            <!-- Show fit tips -->
-            <div class="center">
-                {% for tips in fit_tips %}
-                <div class="fit-tip-section text-center">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title text-black" style="color: black;">{{ tips.fit_tip_title }}</h5>
-                            <h6 class="card-subtitle mb-2" style="color: black;">{{ tips.fit_tip }}</h6>
-                            <p class="card-text text-muted" style="color: black;">By: {{ tips.user }}</p>
-                            {% if request.user == tips.user or request.user.is_superuser %}
-                            <a href="{% url 'edit_fit_tip' product.id tips.id %}" class="card-link">Edit</a>
-                            <a href="{% url 'delete_fit_tip' product.id tips.id %}" class="card-link">Delete</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
         </div>
     </div>
 </div>
