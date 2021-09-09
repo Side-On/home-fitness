@@ -53,7 +53,7 @@
             aria-haspopup="true" aria-expanded="false">
             All Products
           </a>
-          <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+          <div class="dropdown-menu border-0 ml-6" aria-labelledby="all-products-link">
             <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
             <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
             <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
@@ -61,31 +61,25 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="logo-font nav-link text-white mr-4 mt-1"
+          <a class="logo-font nav-link text-white mr-6 mt-1"
             href="{% url 'products' %}?category=treadmills,rowing_machines,bikes" id="" data-toggle=""
             aria-haspopup="true" aria-expanded="false">Cardio
           </a>
         </li>
-        <li class="nav-item dropdown mt-1">
+        <li class="nav-item dropdown mt-1 ml-6">
           <a class="logo-font nav-link text-white" href="{% url 'products' %}?category=dumbells,kettlebells,bars">
             Weights
           </a>
         </li>
-        <li class="nav-item dropdown mt-1">
+        <li class="nav-item dropdown mt-1 ml-6">
           <a class="logo-font nav-link text-white" href="{% url 'products' %}?category=protein_bars,gels">
             Diet
           </a>
         </li>
 
-        <li class="nav-item dropdown mt-1">
+        <li class="nav-item dropdown mt-1 ml-6">
           <a class="logo-font nav-link text-white" href="{% url 'products' %}?category=yoga_mats,skipping_ropes">
             Accessories
-          </a>
-        </li>
-        
-        <li class="nav-item dropdown mt-1">
-          <a class="logo-font nav-link text-white" href="{% url 'all_stories' %}">
-            Stories
           </a>
         </li>
         </ul>
