@@ -102,7 +102,7 @@
 </div>
 
 {% if user.is_authenticated %}
-<!-- Leave a review -->
+<!-- Add a review -->
 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#leaveReview" aria-expanded="false"
     aria-controls="collapseExample">
     Leave a review
@@ -112,9 +112,9 @@
         {% csrf_token %}
         <label for="review_title">Review Title:</label>
         <input type="text" id="review_title" name="review_title" class="form-control"
-            placeholder="Enter a review title">
+            placeholder="Enter a review title" required>
         <textarea name="review_comment" id="review_comment" cols="30" rows="10" class="form-comtrol"
-            placeholder="Write your review..."></textarea>
+            placeholder="Write your review..." required></textarea>
         <input type="submit" class="btn rounded-0 text-white" value="Add Review">
     </form>
 </div>

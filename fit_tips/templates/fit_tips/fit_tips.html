@@ -10,7 +10,7 @@
     Leave a fit tip!
 </button>
 <div class="collapse" id="leaveFitTip">
-    <form action="{% url 'add_fit_tip' fit_tip.product %}" method="POST">
+    <form action="{% url 'add_fit_tip' product_id %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form | crispy }}
         <label for="fit_tip_title">Fit Tip Title:</label>
@@ -18,7 +18,13 @@
             placeholder="Enter a fit tip title">
         <textarea name="fit_tip" id="fit_tip" cols="30" rows="10" class="form-comtrol"
             placeholder="Write your fit tip..."></textarea>
+            <select name="products" id="products">
+            {% for product in products %}
+            <option name="product" id="product" value="product">{{ product.name }}</option>
+            {% endfor %}
+        </select>
         <input type="submit" class="btn rounded-0 text-white" value="Add Tip!">
+        
     </form>
 </div>
 

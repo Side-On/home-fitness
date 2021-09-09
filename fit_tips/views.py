@@ -12,11 +12,11 @@ from products.models import Product
 def all_fit_tips(request):
 
     fit_tips = FitTip.objects.all()
-    product = Product.objects.all()
+    products = Product.objects.all()
 
     context = {
         'fit_tips': fit_tips,
-        'product': product,
+        'products': products,
     }
 
     return render(request, 'fit_tips/fit_tips.html', context)
@@ -24,33 +24,34 @@ def all_fit_tips(request):
 
 @login_required
 def add_fit_tip(request, product_id):
-    product = Product.objects.get(id=product_id)
+
     if not request.user.is_authenticated:
-        messages.error(request, 'Oops! Only signed in users can leave a review')
+        messages.error(request, 'Oops! Only signed in users can leave a fit tip')
         return redirect(reverse('home'))
+    product = Product.objects.get(id=product_id)
 
     if request.user.is_authenticated:
         if request.method == "POST":
-            form = FitTipForm(request.POST)
+            form = FitTipForm(instance=product)
             if form.is_valid():
                 fit_tip = form.save(commit=False)
                 fit_tip.user = request.user
-                fit_tip.title = request.POST['review_title']
-                fit_tip.comment = request.POST['review_comment']
+                fit_tip.title = request.POST['fit_tip_title']
+                fit_tip.comment = request.POST['fit_tip']
                 fit_tip.product = product
                 fit_tip.save()
-                messages.success(request, "You've left a review! Thank you")
-
-                context = {
-                    'product_id': product.id
-                }
+                messages.success(request, "You've left a fit tip! Thank you")
                 return redirect('fit_tips', product.id)
         else:
-            form = FitTipForm()
-        return render(request, 'fit_tips/fit_tips', {"form": form})
+            context = {
+                'form': form,
+                'product': product,
+            }
+        return render(request, 'fits_tips/fit_tips.html', context)
     else:
-        messages.error(request, 'Oops! You need to be signed in to leave a review')
-        return redirect('fit_tips', product_id)
+        messages.error(request, 'Oops! You need to be signed in to leave a fit tip')
+        return redirect('account_login')
+
 
 
 @login_required
@@ -75,3 +76,4 @@ def edit_fit_tip(request, fit_tip_id):
             return redirect('fit_tips')
     else:
         return redirect('account_login')
+
