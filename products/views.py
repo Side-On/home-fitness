@@ -20,6 +20,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+    page_type = 'default'
 
     if request.GET:
         if 'sort' in request.GET:
@@ -37,9 +38,24 @@ def all_products(request):
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
+
+            category_string = request.GET['category']
+            if category_string == 'treadmills,rowing_machines,bikes':
+                page_type = 'cardio'
+            
+            if category_string == 'dumbells,kettlebells,bars':
+                page_type = 'weights'
+            
+            if category_string == 'protein_bars,gels':
+                page_type = 'diet'
+
+            if category_string == 'yoga_mats,skipping_ropes':
+                page_type = 'accessories'
+
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -57,6 +73,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'page_type': page_type,
     }
 
     return render(request, 'products/products.html', context)
@@ -103,7 +120,7 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, you can only do that if you are an admin')
         return redirect(reverse('home'))
