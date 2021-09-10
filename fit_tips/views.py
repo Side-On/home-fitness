@@ -23,35 +23,26 @@ def all_fit_tips(request):
 
 
 @login_required
-def add_fit_tip(request, product_id):
+def add_fit_tip(request):
 
     if not request.user.is_authenticated:
         messages.error(request, 'Oops! Only signed in users can leave a fit tip')
         return redirect(reverse('home'))
-    product = Product.objects.get(id=product_id)
+    product = Product.objects.get(id=request.POST['products'])
 
     if request.user.is_authenticated:
         if request.method == "POST":
-            form = FitTipForm(instance=product)
-            if form.is_valid():
-                fit_tip = form.save(commit=False)
-                fit_tip.user = request.user
-                fit_tip.title = request.POST['fit_tip_title']
-                fit_tip.comment = request.POST['fit_tip']
-                fit_tip.product = product
-                fit_tip.save()
-                messages.success(request, "You've left a fit tip! Thank you")
-                return redirect('fit_tips', product.id)
+            fit_tip = FitTip.objects.create(fit_tip_title=request.POST.get('fit_tip_title'), fit_tip=request.POST.get('fit_tip'), user=request.user, product=product)
+            messages.success(request, "You've left a fit tip! Thank you")
+            return redirect('fit_tips')
         else:
             context = {
-                'form': form,
                 'product': product,
             }
-        return render(request, 'fits_tips/fit_tips.html', context)
+        return render(request, 'fit_tips/fit_tips.html', context)
     else:
         messages.error(request, 'Oops! You need to be signed in to leave a fit tip')
         return redirect('account_login')
-
 
 
 @login_required
@@ -76,4 +67,3 @@ def edit_fit_tip(request, fit_tip_id):
             return redirect('fit_tips')
     else:
         return redirect('account_login')
-
