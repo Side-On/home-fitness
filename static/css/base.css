@@ -17,6 +17,13 @@ body {
     margin-right: 0;
 }
 
+.line-break {
+    border: 1px solid white;
+    width: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .hero-text {
     font-size: 7rem;
 }
