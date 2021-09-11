@@ -23,13 +23,11 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
-    addresses = profile.addresses.all()
 
     template = "profiles/profile.html"
     context = {
         'form': form,
         'orders': orders,
-        'addresses': addresses,
         'on_profile_page': True
     }
 
@@ -51,4 +49,3 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
-    
