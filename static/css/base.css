@@ -330,6 +330,7 @@ input[name='q']::placeholder {
 
 .fit-tip-card {
     width: 50%;
+    display: inline-flex;
 }
 
 .fit-tip-image-container {
