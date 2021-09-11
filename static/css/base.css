@@ -320,8 +320,8 @@ input[name='q']::placeholder {
     margin-top: 20px;
 }
 
-.fip-tip-image {
-    width: 50px;
+.fit-tip-card {
+    width: 50%;
 }
 
 .fit-tip-image-container {
@@ -336,6 +336,10 @@ input[name='q']::placeholder {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+a.fit-tip-tag {
+    color: white;
 }
 
 textarea {
