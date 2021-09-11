@@ -55,7 +55,7 @@
     <div class="container h-100">
         <div class="row h-100">
             <div>
-                <h1 class="text-white text-center hero-text">Al Products</h1>
+                <h1 class="text-white text-center hero-text">All Products</h1>
             </div>
         </div>
     </div>
@@ -78,11 +78,6 @@
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ product.name }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
