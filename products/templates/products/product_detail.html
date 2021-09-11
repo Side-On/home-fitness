@@ -138,6 +138,7 @@
             <h5 class="card-title text-black" style="color: black;">{{ review.review_title }}</h5>
             <h6 class="card-subtitle mb-2" style="color: black;">{{ review.review_comment }}</h6>
             <p class="card-text text-muted" style="color: black;">By: {{ review.user }}</p>
+            <p class="card-text text-muted" style="color: black;">On: {{ review.date }}</p>
             {% if request.user == review.user or request.user.is_superuser %}
             <a href="{% url 'edit_review' product.id review.id %}" class="card-link">Edit</a>
             <a href="{% url 'delete_review' product.id review.id %}" class="card-link">Delete</a>

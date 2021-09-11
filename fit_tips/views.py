@@ -11,7 +11,7 @@ from products.models import Product
 
 def all_fit_tips(request):
 
-    fit_tips = FitTip.objects.all()
+    fit_tips = FitTip.objects.all().order_by('-date')
     products = Product.objects.all()
 
     context = {

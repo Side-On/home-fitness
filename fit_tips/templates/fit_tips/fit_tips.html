@@ -31,6 +31,7 @@
 {% if user.is_authenticated %}
 <div class="mx-auto text-center" style="width: 400px;">
 <form action="{% url 'add_fit_tip' %}" method="POST" class="fit-tip-form">
+    {% csrf_token %}
     <div class="form-group">
       <label for="fit_tip_title">Fit Tip Title:</label>
       <input type="text" id="fit_tip_title" name="fit_tip_title" class="form-control"
@@ -68,6 +69,7 @@
         <h5 class="card-title">{{ fit_tip.fit_tip_title }}</h5>
         <p class="card-text">{{ fit_tip.fit_tip }}</p>
         <p class="card-text text-muted">Left by: {{ fit_tip.user }}</p>
+        <p class="card-text text-muted">Date: {{ fit_tip.date }}</p>
     </div>
     {% if request.user == tips.user or request.user.is_superuser %}
     <div class="text-right">

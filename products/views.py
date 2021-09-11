@@ -82,13 +82,11 @@ def all_products(request):
 def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews = Review.objects.filter(product=product_id).order_by("id")
-    fit_tips = FitTip.objects.filter(product=product_id).order_by("id")
+    reviews = Review.objects.filter(product=product_id).order_by('-date')
 
     context = {
         'product': product,
         'reviews': reviews,
-        'fit_tips': fit_tips,
     }
     return render(request, 'products/product_detail.html', context)
 
