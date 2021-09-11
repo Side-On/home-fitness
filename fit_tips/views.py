@@ -67,3 +67,16 @@ def edit_fit_tip(request, fit_tip_id):
             return redirect('fit_tips')
     else:
         return redirect('account_login')
+
+
+@login_required
+def delete_fit_tip(request, fit_tip_id):
+    if request.user.is_authenticated:
+        fit_tip = get_object_or_404(FitTip, pk=fit_tip_id)
+
+        if request.user == fit_tip.user:
+            fit_tip.delete()
+            messages.success(request, 'Review has been deleted')
+        return redirect('fit_tips')
+    else:
+        return redirect('account_login')
