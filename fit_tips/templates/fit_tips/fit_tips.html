@@ -20,12 +20,15 @@
 
     <h3>Share your experiences!</h3>
     <p>Here you can share or discover the best ways to use our equipment.</p>
-    {% if not user.is_authenticated %}
+    {% if user.is_authenticated %}
+    <h4>Feel free to leave a fit tip for anybody else out there using our equipment!</h4>
+    {% else %}
     <h4 class="text-center text-smaller mb-4">To leave a fit tip, please <a href="{% url 'account_login' %}">Sign in</a> or <a href="{% url 'account_signup' %}"> create </a> an account.</h4>
     {% endif %}
+
 </div>
 <!-- Leave a fit tip  -->
-{% if user == is_authenticated %}
+{% if user.is_authenticated %}
 <div class="mx-auto text-center" style="width: 400px;">
 <form action="{% url 'add_fit_tip' %}" method="POST" class="fit-tip-form">
     <div class="form-group">
