@@ -43,7 +43,7 @@ def all_products(request):
             if category_string == 'treadmills,rowing_machines,bikes':
                 page_type = 'cardio'
 
-            if category_string == 'dumbells,kettlebells,bars':
+            if category_string == 'bars,dumbells,kettlebells':
                 page_type = 'weights'
 
             if category_string == 'protein_bars,gels':
