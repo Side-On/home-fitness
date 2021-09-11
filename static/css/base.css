@@ -290,7 +290,7 @@ input[name='q']::placeholder {
     transition: .5s ease;
 }
 
-.container:hover .image-overlay {
+.index-category-images:hover .image-overlay {
     opacity: 4;
     background: rgba(0, 0, 0, 0.5);
 }
@@ -309,6 +309,14 @@ input[name='q']::placeholder {
 
 .card-body {
     color: black;
+}
+
+.card-title {
+    font-size: 3rem;
+}
+
+.card-subtitle {
+    font-size: 2rem;
 }
 
 .review-section {
