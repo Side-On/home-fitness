@@ -125,6 +125,11 @@
 
 </div>
 
+{% if reviews %}
+<h4 class="text-center mt-4">Here are some user reviews</h4>
+{% else %}
+<h4 class="text-center mt-4">No reviews of this yet. {% if not user.is_authenticated %} <a href="{% url 'account_login' %}">Sign in</a> or <a href="{% url 'account_signup' %}"> create </a> an account to leave a review {% endif %} </h4>
+{% endif %}
 {% for review in reviews %}
 <div class="container text-center">
 <div class="review-section">
