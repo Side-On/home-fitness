@@ -64,7 +64,7 @@ This is where the user can look at all of their past orders. As well as look at 
 
 ## Wireframes
 
-Please head over here for all of the wireframes and design ideas.
+Please head over to the [Wireframes](wireframes/wireframes.md) and design ideas.
 
 <br>
 

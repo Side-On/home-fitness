@@ -6,4 +6,4 @@ For the mobile view, I added a dropdown menu so that the links are easily visibl
 
 ## Index page
 
-[Index Page](/wireframes/screenshots/index-wireframe.png)
+![Index Page](/wireframes/screenshots/index-wireframe.png)
