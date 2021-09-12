@@ -105,7 +105,7 @@
 <!-- Add a review -->
 <div class="container text-center">
     <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#leaveReview"
-        aria-expanded="false" aria-controls="collapseExample">
+        aria-expanded="false">
         Leave a review
     </button>
     <div class="collapse" id="leaveReview">
@@ -130,11 +130,11 @@
 <div class="container text-center">
 <div class="review-section">
     <div class="card">
-        <div class="card-body">
-            <h5 class="card-title text-black" style="color: black;">{{ review.review_title }}</h5>
-            <h6 class="card-subtitle mb-2" style="color: black;">{{ review.review_comment }}</h6>
-            <p class="card-text text-muted" style="color: black;">By: {{ review.user }}</p>
-            <p class="card-text text-muted" style="color: black;">On: {{ review.date }}</p>
+        <div class="card-body text-black">
+            <h5 class="card-title">{{ review.review_title }}</h5>
+            <h6 class="card-subtitle mb-2">{{ review.review_comment }}</h6>
+            <p class="card-text text-muted">By: {{ review.user }}</p>
+            <p class="card-text text-muted">On: {{ review.date }}</p>
             {% if request.user == review.user or request.user.is_superuser %}
             <a href="{% url 'edit_review' product.id review.id %}" class="card-link">Edit</a>
             <a href="{% url 'delete_review' product.id review.id %}" class="card-link">Delete</a>

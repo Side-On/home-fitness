@@ -41,7 +41,7 @@
       <label for="products">Choose the product</label>
       <select class="form-control" name="products" id="products" required>
         {% for product in products %}
-            <option name="products" id="products" value="{{ product.id }}">{{ product.name }}</option>
+            <option name="products" value="{{ product.id }}">{{ product.name }}</option>
             {% endfor %}
       </select>
     </div>
@@ -56,14 +56,12 @@
 {% endif %}
 <!-- Fit tips -->
 <div class="container text-center">
-
     {% for fit_tip in fit_tips %}
     <div class="card fit-tip-card mx-auto mb-4" style="width: 18rem" >
         <div class="fit-tip-image-container">
             <a href="{% url 'product_detail' fit_tip.product.id %}" class="fit-tip-tag">
                 <img class="card-img-top" src="{{ fit_tip.product.image.url }}" alt="{{ product.name }}">
-                <div class="fit-tip-image-centered">{{ fit_tip.product.name }}
-            </a></div>
+                <div class="fit-tip-image-centered">{{ fit_tip.product.name }}</div></a>
     </div>
     <div class="card-body">
         <h5 class="card-title">{{ fit_tip.fit_tip_title }}</h5>
@@ -79,5 +77,5 @@
     {% endif %}
 </div>
 {% endfor %}
-
+</div>
 {% endblock %}

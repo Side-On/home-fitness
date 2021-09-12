@@ -1,7 +1,6 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
@@ -32,12 +31,10 @@
   {% block extra_js %}
   {% endblock %}
 
-  <title>Home Fitness {% block extra_title %}{% endblock %}</title>
+  <title>Home Fitness</title>
 </head>
 
 <body>
-
-
   <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
       aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +59,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="logo-font nav-link text-white mr-6 mt-1"
-            href="{% url 'products' %}?category=treadmills,rowing_machines,bikes" id="" data-toggle=""
+            href="{% url 'products' %}?category=treadmills,rowing_machines,bikes" data-toggle=""
             aria-haspopup="true" aria-expanded="false">Cardio
           </a>
         </li>
@@ -131,7 +128,7 @@
             </div>
           </a>
         </div>
-
+        </div>
   </nav>
 
   {% if messages %}
@@ -161,7 +158,7 @@
   {% endblock %}
 
   {% block postloadjs %}
-  <script type="text/javascript">
+  <script>
     $('.toast').toast('show');
   </script>
   {% endblock %}
