@@ -176,9 +176,23 @@ This button is also only visible to the admin, and will remove the selected prod
 
 ## HTML 
 
-The html test were completed through the project. I had some issues around 
+Working through the user stories I explored each link to reach the expected outcome. This was completed several times throughout the production of the project so I was constantly testing and resolving any issues with it.
 
 ### Code validation
+
+Each HTML page was passed through [w3 Validator](https://validator.w3.org/). Below are some of the errors encountered. I've ignored the errors which are connecting to Django, for example: `{% extends "base.html" %}`
+
+One error showing on the checkout.html page:
+
+```
+Empty heading.
+
+From line 136, column 3; to line 136, column 51
+
+<h1 class="text-light logo-font loading-spinner">↩    <
+```
+This is required for the overlay to show the loading spinner what a payment is being processed.
+
 
 ## CSS
 
