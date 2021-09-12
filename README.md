@@ -22,6 +22,9 @@ Users with accounts should be rewarded and given things which non-registered use
 - User wants to get a record of their order
 - User wants to only see products of a certain type
 - User wants to sort all items by price
+- User wants to search for items based on the category, name or description of the item
+- User wants to see what is in there bag, and change the items inside it
+- User want a confirmation that an item has been successfully ordered
 
 ## Site owner features
 - Owner wants to be able to create, remove, update and delete products
@@ -38,20 +41,29 @@ Users with accounts should be rewarded and given things which non-registered use
 - Profile page
 This is where the user can look at all of their past orders. As well as look at their other addresses used when purchasing their items. 
 
-- Select a delivery address at the checkout and autofill
-A user can have more than one delivery address. And to save them from having to enter a new one each time, this feature will save it for them for later use.
-
 - Shopping bag - Updated whenever a new product is selected. This appears in the top right of the screen and shows the user what's currently in the shopping bag. It also shows a small image of what the product is, and what the running total is.
 
 - Emails - Sent whenever a new user signs up to confirm. another is sent whenever an order has been made. This is to give users a record of whatever they've previously ordered.
 
 - Admin - section of the site where the site owner can look at users emails, addresses etc. Admin can also add remove and edit new products, including adding images.
 
-- 
+- Navbar - Located at the top of the pages throughout the site. This had a logo to take the user back to the home page. A search bar for users to search for products by name, brand name, category and description.
+
+- Account logo -Takes the user to their account. If they aren't signed in, the dropdown menu on the logo will give options to register or login.
+
+- Basket - This shows the user how much is in there basket, and the total cost of what they have in there. Clicking on this shows the user the contents, and show a button to take them to the checkout to update or pay for their items.
+
+- Fit Tips - Page for users to share any workout tips or ideas to other users. This allows a logged in user to select which item they want to leave a tip about. User must be authorised and logged in to leave a fit tip.
+
+## Features to implement 
+
+- Multiple addresses - Select a delivery address at the checkout and autofill. A user can have more than one delivery address. And to save them from having to enter a new one each time, this feature will save it for them for later use.
+
+- Change password - Update the profile to allow the user to update their password.
+
+- More in depth categorisation - Better ways of sorting products like, most expensive first, or most reviewed etc.
 
 ## Wireframes
-
-
 
 <br>
 
@@ -93,7 +105,7 @@ A user can have more than one delivery address. And to save them from having to 
 
 ## Testing
 
-Follow this link to go to the test completed completed alongside the user stories.
+Follow this [Testing documentation link](testing/TESTING.md) to go to the tests completed alongside the user stories. This is also contains the validation issues and other bugs found in the project.
 
 ## Code Used
 
@@ -103,15 +115,18 @@ Follow this link to go to the test completed completed alongside the user storie
 <br>
 
 ###  Github
+
 - I set the project up from the Code Institute template which contained a lot of features of add-ons to help with formatting and other features in the project.
 
 - Used for version control through the commands:
 
-    git add .<br>
-    git commit -m "<i>commit message</i>" <br>
-    git push
+```
+git add .
+git commit -m "commit message"
+git push
+```
 
-    This one done whenever new features, fixes and testing was done.
+This one done whenever new features, fixes and testing was done.
 
 - A place to keep the project files and media files. 
 
