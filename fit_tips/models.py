@@ -7,7 +7,8 @@ from products.models import Product
 
 class FitTip(models.Model):
 
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="fit_tips")
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,
+                                related_name="fit_tips")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     fit_tip_title = models.CharField(max_length=100, null=False, blank=False)
     fit_tip = models.TextField(max_length=400, null=False, blank=False)

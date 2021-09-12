@@ -13,7 +13,8 @@ from products.models import Product
 def add_review(request, product_id):
     product = Product.objects.get(id=product_id)
     if not request.user.is_authenticated:
-        messages.error(request, 'Oops! Only signed in users can leave a review')
+        messages.error(request, 'Oops! Only signed in users'
+                       ' can leave a review')
         return redirect(reverse('home'))
 
     if request.user.is_authenticated:
@@ -32,7 +33,8 @@ def add_review(request, product_id):
             form = UserReviewForm()
         return render(request, 'products/product_detail.html', {"form": form})
     else:
-        messages.error(request, 'Oops! You need to be signed in to leave a review')
+        messages.error(request, 'Oops! You need to be signed in'
+                       ' to leave a review')
         return redirect('product_details', product_id)
 
 
@@ -55,7 +57,8 @@ def edit_review(request, product_id, review_id):
                 form = UserReviewForm(instance=review)
             return render(request, 'reviews/edit_review.html', {'form': form})
         else:
-            messages.error(request, "Sorry you don't have permission to edit this review")
+            messages.error(request, "Sorry you don't have permission"
+                           " to edit this review")
             return redirect('product_detail', product_id)
     else:
         return redirect('account_login')
@@ -66,7 +69,7 @@ def delete_review(request, product_id, review_id):
     if request.user.is_authenticated:
         product = Product.objects.get(id=product_id)
         review = get_object_or_404(Review, product=product, pk=review_id)
-        
+
         if request.user == review.user:
             review.delete()
             messages.success(request, 'Review has been deleted')

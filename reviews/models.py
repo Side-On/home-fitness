@@ -7,7 +7,8 @@ from products.models import Product
 
 class Review(models.Model):
 
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="reviews")
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,
+                                related_name="reviews")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     review_title = models.CharField(max_length=254, null=False, blank=False)
     review_comment = models.TextField(max_length=800, null=False, blank=False)

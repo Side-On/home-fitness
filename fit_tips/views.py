@@ -26,13 +26,18 @@ def all_fit_tips(request):
 def add_fit_tip(request):
 
     if not request.user.is_authenticated:
-        messages.error(request, 'Oops! Only signed in users can leave a fit tip')
+        messages.error(request,
+                       'Oops! Only signed in users can leave a fit tip')
         return redirect(reverse('home'))
     product = Product.objects.get(id=request.POST['products'])
 
     if request.user.is_authenticated:
         if request.method == "POST":
-            fit_tip = FitTip.objects.create(fit_tip_title=request.POST.get('fit_tip_title'), fit_tip=request.POST.get('fit_tip'), user=request.user, product=product)
+            fit_tip = FitTip.objects.create(fit_tip_title=request.POST.get(
+                                            'fit_tip_title'),
+                                            fit_tip=request.POST.get(
+                                            'fit_tip'), user=request.user,
+                                            product=product)
             messages.success(request, "You've left a fit tip! Thank you")
             return redirect('fit_tips')
         else:
@@ -41,7 +46,8 @@ def add_fit_tip(request):
             }
         return render(request, 'fit_tips/fit_tips.html', context)
     else:
-        messages.error(request, 'Oops! You need to be signed in to leave a fit tip')
+        messages.error(request,
+                       'Oops! You need to be signed in to leave a fit tip')
         return redirect('account_login')
 
 
@@ -61,9 +67,12 @@ def edit_fit_tip(request, fit_tip_id):
                     return redirect('fit_tips')
             else:
                 form = FitTipForm(instance=fit_tip)
-            return render(request, 'fit_tips/edit_fit_tip.html', {'form': form})
+            return render(request, 'fit_tips/edit_fit_tip.html',
+                          {'form': form})
         else:
-            messages.error(request, "Sorry you don't have permission to edit this fit tip")
+            messages.error(request,
+                           "Sorry you don't have permission"
+                           "to edit this fit tip")
             return redirect('fit_tips')
     else:
         return redirect('account_login')
