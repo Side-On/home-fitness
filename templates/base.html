@@ -57,36 +57,34 @@
             <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
           </div>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item">
           <a class="logo-font nav-link text-white mr-6 mt-1"
             href="{% url 'products' %}?category=treadmills,rowing_machines,bikes" data-toggle=""
             aria-haspopup="true" aria-expanded="false">Cardio
           </a>
         </li>
-        <li class="nav-item dropdown mt-1 ml-6">
+        <li class="nav-item mt-1 ml-6">
           <a class="logo-font nav-link text-white" href="{% url 'products' %}?category=dumbells,kettlebells,bars">
             Weights
           </a>
         </li>
-        <li class="nav-item dropdown mt-1 ml-6">
+        <li class="nav-item mt-1 ml-6">
           <a class="logo-font nav-link text-white" href="{% url 'products' %}?category=protein_bars,gels">
             Diet
           </a>
         </li>
 
-        <li class="nav-item dropdown mt-1 ml-6">
+        <li class="nav-item mt-1 ml-6">
           <a class="logo-font nav-link text-white" href="{% url 'products' %}?category=yoga_mats,skipping_ropes">
             Accessories
           </a>
         </li>
         
-        <li class="nav-item dropdown mt-1 ml-6">
+        <li class="nav-item mt-1 ml-6">
           <a class="logo-font nav-link text-white" href="{% url 'fit_tips' %}">
             Fit Tips
           </a>
-        </li>
         </ul>
-        
         <form method="GET" action="{% url 'products' %}" class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search our products"
             aria-label="Search" style="width: 70%;">
