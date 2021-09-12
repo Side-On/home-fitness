@@ -7,7 +7,7 @@ Below I've gone through the journey of a potential customer. Each part meeting a
 
 ### User Stories List
 
-![User stories list](testing/images/user_stories/user-stories-list.png)
+![User stories list](/testing/images/user_stories/user-stories-list.png)
 
 <br>
 
