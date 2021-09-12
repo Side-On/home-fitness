@@ -172,8 +172,6 @@ Any existing product can be edited by going to the product page itself, and clic
 
 This button is also only visible to the admin, and will remove the selected product from the database. Any user who copies the url to the delete page and isn't logged in as the site admin, will be redirected to the sign in page.
 
-
-
 ## HTML 
 
 Working through the user stories I explored each link to reach the expected outcome. This was completed several times throughout the production of the project so I was constantly testing and resolving any issues with it.
@@ -193,16 +191,30 @@ From line 136, column 3; to line 136, column 51
 ```
 This is required for the overlay to show the loading spinner what a payment is being processed.
 
+All other minor errors which were recognised in the validator have been fixed.
 
 ## CSS
 
+CSS was constantly tried and tested throughout the production of the site. Any issue were resolved when looking at the layout of each part of the website, so any design errors were made apparent as and when they were added.
+
 ### Code validation
+
+Each CSS file was passed through the [W3C Validator](https://jigsaw.w3.org/). No errors were found.
 
 ### Responsive
 
-## Python and Django
+Mobile design was looked at and designed towards at the start of the project. Below are some examples of the design differences with on a smaller screen. Below are examples of the display shown on smaller resolutions.
+
+![Resolution image](/testing/images/design/response-design.png)
+![Resolution image](/testing/images/design/response-design-2.png)
+![Resolution image](/testing/images/design/smaller-screen-nav.png)
+
+I did experience some issues with getting to search bar, profile and bag icon to go where I wanted them. The aim was to move the search bar at the top of the navbar, and the icons at the bottom of the list, however I was unable to get this working in time. This is something I aim to implement in the future.
+
+## Python
+
+Python was used throughout this project. The code was checked and validated through [PEP8](http://pep8online.com/). Any errors which needed fixing were resolved and documented here
 
 ### Code Validation
 
-## Any issues or other bugs in the project
-
+All .py files where put through the validation. There were a lot of indentation issues and also 'Line too long' issues. I looked at [Stack Overflow](https://stackoverflow.com/) for a lot of guidance on how to deal with some lines that are too long. 
