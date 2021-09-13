@@ -9,7 +9,6 @@ body {
     background-color: black;
     color: white;
     font-family: 'Patrick Hand', cursive;
-    font-size: 1.3rem;
 }
 
 .row {
@@ -297,7 +296,7 @@ input[name='q']::placeholder {
     transition: .5s ease;
 }
 
-.index-category-images:hover .image-overlay {
+.index-category-images .image-overlay {
     opacity: 4;
     background: rgba(0, 0, 0, 0.5);
 }
