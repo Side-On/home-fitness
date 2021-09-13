@@ -280,6 +280,10 @@ input[name='q']::placeholder {
     color: black;
 }
 
+p {
+    font-size: x-large;
+}
+
 .table {
     color: white;
 }
