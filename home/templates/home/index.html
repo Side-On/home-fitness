@@ -20,22 +20,28 @@
     </div>
 </div>
 
-<div class="container text-center about-us mt-5">
-    <h2>Who we are</h2>
+<div class="container text-center mt-5 mb-5">
+    <h2>Who we are</h2> 
     <p>We at Home Fitness believe that you don't need to spent that extra money on gym memberships</p>
-    <hr class="line-break">
     <p>This store has everthing you need to hit those goals, from you're own home.</p>
     <hr class="line-break">
-    <h3>We're a community!</h3>
-    <p>Head over the to the <a href="{% url 'fit_tips' %}">Fit Tips</a> page to see some tips from other users about the products we sell.
-</div>
+    <h2>We're a community!</h2>
+    <p>Head over the to the <a href="{% url 'fit_tips' %}">Fit Tips</a> page to see some tips from other users about the products we sell.</p>
+    {% if not user.is_authenticated %}
+    <hr class="line-break">
+    <h2>Share the knowledge!</h2>
+    <p>Got something to share with the rest of us? You'll need to <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> an account first!</p>
+    {% endif %}
 
-<div class="container-fluid mt">
     <hr class="line-break">
 
     <h1 class="text-center">Shop by Category</h1>
     <hr>
     <p class="text-center">Browse the below categories and see what we have for each!</p>
+</div>
+
+<div class="container-fluid mt">
+
     <div class="row">
         <div class="index-category-images col-lg-3 card bg-dark text-white">
             <a href="{% url 'products' %}?category=treadmills,rowing_machines,bikes">
