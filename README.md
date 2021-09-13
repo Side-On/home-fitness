@@ -1,4 +1,7 @@
 # Milestone 4 Project
+
+<br>
+
 ## Home Fitness
 
 This project was designed and created by Side-On in the Software Development Diploma course, provided by the [Code Institute](https://codeinstitute.net/full-stack-software-development-diploma-uk/). 
@@ -20,20 +23,22 @@ The site I designed is called `Home Fitness`. I thought of it during the lockdow
 
 <br>
 
-## Site Owner Goals
+---
+
+## UX
+
+### Site Owner Goals
 
 >I want to create a website where people can buy the latest fitness equipment. I'm a small start up so I don't have the largest array of products, but I hope to increase this by bringing people to buy my products. <br>
 Users with accounts should be rewarded and given things which non-registered users don't have access to, such as leaving reviews or rating for the items they buy. I'm hoping this will encourage returning customers and make it easier for them to put my products as well by saving their details. I also want registered users to be able to have more than one delivery address to make it easier to switch between addresses.
 
-## UX
-
-## User Stories
+### User Stories
 
 Please head over to the testing area, it shows all of the user stories there, along with the testing carried out against each of them in order to achieve full functionality. 
 
-[User stories and testing](testing/TESTING.md)
+[User stories and testing](testing/README.md)
 
-## Features
+### Features
 
 - Checkout - User can take everything that's in their shopping bag and look at the summary of what they've got all in one place. It'll also show the total amount of the contents. They can then make a secure payment, when they are ready to purchase. They can also edit the amount they want of each item, and also remove any items they no longer want.
 
@@ -54,7 +59,7 @@ This is where the user can look at all of their past orders. As well as look at 
 
 - Fit Tips - Page for users to share any workout tips or ideas to other users. This allows a logged in user to select which item they want to leave a tip about. User must be authorised and logged in to leave a fit tip.
 
-## Features to implement 
+### Features to implement 
 
 - Multiple addresses - Select a delivery address at the checkout and autofill. A user can have more than one delivery address. And to save them from having to enter a new one each time, this feature will save it for them for later use.
 
@@ -62,21 +67,23 @@ This is where the user can look at all of their past orders. As well as look at 
 
 - More in depth categorisation - Better ways of sorting products like, most expensive first, or most reviewed etc.
 
+---
+
 ## Wireframes
 
-Please head over to the [Wireframes](wireframes/wireframes.md) and design ideas.
+Please head over to the [Wireframes](wireframes/README.md) and design ideas.
 
-<br>
+---
 
 ## Technologies Used
 
 - Django - Used to create seperate apps throughout the project, enabling the developer to edit and alter each feature individually. It also increasees the scalability of the project along the line. 
 
-- Django allauth - Used to create the register and sign-in feature in the project.
+    - Django allauth - Used to create the register and sign-in feature in the project.
 
-- Django Countries - Used to allow users to select a full list of countries.
+    - Django Countries - Used to allow users to select a full list of countries.
 
-- Django Crispy Forms - Used to generate and style forms.
+    - Django Crispy Forms - Used to generate and style forms.
 
 - Stripe - Used to create and enable the payment feature.
 
@@ -104,13 +111,23 @@ Please head over to the [Wireframes](wireframes/wireframes.md) and design ideas.
 
 - Amazon Web Service (AWS) - used to store images and static files for the website.
 
+---
+
 ## Testing
 
-Follow this [Testing documentation link](testing/TESTING.md) to go to the tests completed alongside the user stories. This is also contains the validation issues and other bugs found in the project.
+Follow this [Testing documentation link](testing/README.md) to go to the tests completed alongside the user stories. This is also contains the validation issues and other bugs found in the project.
+
+---
 
 ## Code Used
 
 - I implemented code from the Code Instutitue while completing the projects throughtout the course. This code was used to get the basic apps into the Home Fitness project. The main code was used around the models and JavaScript of the Stripe functionality.
+
+- I was struggling to work out how to get the review view to work, so after some google searching and trying mulitple methods, I found [this video](https://www.youtube.com/watch?v=lSX8nzu9ozg) to be very useful. So credit to the video creator for walking me through how to write the view.
+
+- I used several small snippets of code from [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/). I used Bootstrap 4.1 as it's the one I am most familiar with at this time. The JavaScript to get the Bootstrap features working was also taken from their site.
+
+---
 
 ## Deployment
 <br>
@@ -303,8 +320,9 @@ from storages.backends.s3boto3 import S3Boto3Storage
  1. in the AWS bucket, create an images or media file where you want them to be located.
  2. Drag and drop the files into the file location.
  3. Make sure you select to grant public access before saving them.
-
- -----
+ 4. Once the files are in there, and in the right directory and you should be good to go!
+ 
+ ---
 
 ## Acknowledgements
 
