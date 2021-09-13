@@ -101,16 +101,16 @@
                                                 class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</small>
                                     </a>
                                     {% else %}
-                                    <small class="text-muted">No Rating</small>
+                                        <small class="text-muted">No Rating</small>
                                     {% endif %}
                                     {% if request.user.is_superuser %}
-                                    <div class="text-right">
-                                        <small class="ml-3">
-                                            <a href="{% url 'edit_product' product.id %}" class="">Edit</a>
-                                            <a href="{% url 'delete_product' product.id %}"
-                                                class="text-danger ml-5">Delete</a>
-                                        </small>
-                                    </div>
+                                        <div class="text-right">
+                                            <small class="ml-3">
+                                                <a href="{% url 'edit_product' product.id %}" class="">Edit</a>
+                                                <a href="{% url 'delete_product' product.id %}"
+                                                    class="text-danger ml-5">Delete</a>
+                                            </small>
+                                        </div>
                                     {% endif %}
                                 </div>
                             </div>
@@ -142,4 +142,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
