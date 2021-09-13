@@ -154,6 +154,12 @@ A user can go to their profile and change their delivery address. The next time 
 
 ### Admin
 
+The admin is the superuser of the sites. They are able to add, remove, update and delete all content. They can also add new products and categories and update user details if they need to.
+
+![Admin pages example](/testing/images/user_stories/admin-pages.png)
+
+The above image is an example view of the admin page, which is accessible but adding `/admin` at the end of the url. They'll need to have a username and password.
+
 #### User story 20 - Add new product
 
 ![Add a product](/testing/images/user_stories/admin-add-product.png)
