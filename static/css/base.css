@@ -300,6 +300,10 @@ p {
     transition: .5s ease;
 }
 
+.card-img-overlay {
+    padding: 0;
+}
+
 .index-category-images .image-overlay {
     opacity: 4;
     background: rgba(0, 0, 0, 0.5);
@@ -323,6 +327,7 @@ p {
 
 .card-title {
     font-size: 3rem;
+    margin-bottom: 0;
 }
 
 .card-subtitle {
@@ -368,6 +373,12 @@ textarea {
 .fit-tip-form {
     text-align: center;
 }
+
+.copyright-text {
+    font-size: 0.75rem;
+    padding-top: 15px;
+}
+
 @media only screen and (max-width: 640px) {
     .hero-text {
         font-size: 4rem;
@@ -381,5 +392,16 @@ textarea {
         display: flex !important;
         -ms-flex-preferred-size: auto;
         flex-basis: auto;
+    }
+}
+
+@media (max-width: 1650px) {
+    .card-title {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+
+    .card-text {
+        font-size: 1.5rem;
     }
 }
