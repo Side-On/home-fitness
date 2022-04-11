@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 html {
     height: 100%;
@@ -8,7 +8,7 @@ body {
     height: 100%;
     background-color: black;
     color: white;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Quick Sand', sans-serif;
 }
 
 .row {
@@ -21,10 +21,6 @@ body {
     width: 150px;
     margin-top: 50px;
     margin-bottom: 50px;
-}
-
-.hero-text {
-    font-size: 7rem;
 }
 
 /* from Bulma */
@@ -96,6 +92,7 @@ body {
     color: white;
     outline: 2px solid white;
     padding: 20px;
+    font-size: 4.5rem;
 }
 
 .container-fluid {
@@ -103,12 +100,8 @@ body {
     padding-right: 0% !important;
 }
 
-.navbar-brand {
-    padding-left: 5px;
-}
-
 .about-us {
-    font-size: 3rem;
+    font-size: 1.3rem;
 }
 
 .update-link,
@@ -280,10 +273,6 @@ input[name='q']::placeholder {
     color: black;
 }
 
-p {
-    font-size: x-large;
-}
-
 .table {
     color: white;
 }
@@ -383,6 +372,10 @@ textarea {
     .hero-text {
         font-size: 4rem;
     }
+    
+    .navbar {
+        padding: 0;
+    }
 }
 
 
@@ -392,6 +385,10 @@ textarea {
         display: flex !important;
         -ms-flex-preferred-size: auto;
         flex-basis: auto;
+    }
+
+    .navbar {
+        padding: 0;
     }
 }
 
