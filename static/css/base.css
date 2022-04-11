@@ -11,6 +11,68 @@ body {
     font-family: 'Quick Sand', sans-serif;
 }
 
+/* .navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Quick Sand', sans-serif;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .show {
+    display: block;
+    overflow: hidden;
+  }
+   */
 .row {
     margin-left: 0;
     margin-right: 0;
@@ -32,7 +94,7 @@ body {
     width: 1.5rem;
 }
 
-.navbar-logo {
+ .navbar-logo {
     position: relative;
     width: 170px;
     left: 15px;
@@ -41,7 +103,7 @@ body {
 
 .navbar-padding {
     padding-top: 30px;
-}
+} 
 
 /* The hero image */
 .hero-image {
